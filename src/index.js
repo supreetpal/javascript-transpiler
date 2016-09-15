@@ -14,9 +14,9 @@ let sourceString = "";
 traverse(ast, {
     enter(path) {
         if (path.node.type === "VariableDeclarator") {
-            sourceString += 'variable ' + path.node.id.name; 
-            sourceString += ' is equal to ';
-            sourceString += path.node.init.value + '';
+            sourceString += 'variable `' + path.node.id.name; 
+            sourceString += '` is equal to ';
+            sourceString += path.node.init.value + '.\n';
         }
     },
 
